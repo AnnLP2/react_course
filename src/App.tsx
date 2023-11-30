@@ -1,11 +1,15 @@
-import { BsCalendarFill } from "react-icons/bs";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div>
-      <BsCalendarFill color="red" size="40" />
-    </div>
-  );
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
+  const [person, setPerson] = useState({
+    firstName: "",
+    lastName: "",
+  });
+  const [isLoading, setLoading] = useState(false);
+
+  return <div></div>;
 }
 
 export default App;
