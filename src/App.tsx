@@ -1,9 +1,9 @@
-import { BsCalendarFill } from "react-icons/bs";
+import Like from "./components/Like";
 
 function App() {
   return (
     <div>
-      <BsCalendarFill color="red" size="40" />
+      <Like onClick={() => console.log("Clicked!")} />
     </div>
   );
 }
