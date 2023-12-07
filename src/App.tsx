@@ -1,9 +1,13 @@
-import { BsCalendarFill } from "react-icons/bs";
+import { useState } from "react";
+import NavBar from "./components/NavBar";
+import Cart from "./components/Cart";
 
 function App() {
+  const [cartItems, setCartItems] = useState(["Product1", "Product2", "Product3"]);
   return (
     <div>
-      <BsCalendarFill color="red" size="40" />
+      <NavBar cartItemsCount={cartItems.length} />
+      <Cart cartItems={cartItems} onClear={()=> setCartItems([])}/>
     </div>
   );
 }
