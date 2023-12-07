@@ -1,11 +1,18 @@
-import { BsCalendarFill } from "react-icons/bs";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div>
-      <BsCalendarFill color="red" size="40" />
-    </div>
-  );
+  const [game, setGame] = useState({
+    id: 1,
+    player: {
+      name: "John",
+    },
+  });
+
+  const handleClick = () => {
+    setGame({ ...game, player: { ...game.player, name: "Bob" } });
+  };
+
+  return <div></div>;
 }
 
 export default App;
